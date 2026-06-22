@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于德州扑克 · 资料导览</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f5f5f0;
+            color: #2e2e2e;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1.2rem;
+        }
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 开场 hero 区 */
+        .hero-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+            padding: 2.8rem 2.2rem 3rem;
+            margin-bottom: 2.4rem;
+            border: 1px solid #eaeae4;
+            transition: box-shadow 0.2s;
+        }
+        .hero-card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+        }
+        .hero-card p:first-child {
+            font-size: 1.9rem;
+            font-weight: 350;
+            letter-spacing: 0.02em;
+            color: #1b2a2a;
+            line-height: 1.3;
+            margin-bottom: 1.25rem;
+        }
+        .hero-card .sub {
+            font-size: 1.1rem;
+            color: #4d4d4d;
+            max-width: 75%;
+        }
+        @media (max-width: 600px) {
+            .hero-card {
+                padding: 2rem 1.4rem;
+            }
+            .hero-card p:first-child {
+                font-size: 1.6rem;
+            }
+            .hero-card .sub {
+                max-width: 100%;
+            }
+        }
+
+        /* 承接段落卡片 */
+        .story-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e2db;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        .story-card p {
+            margin-bottom: 1rem;
+        }
+        .story-card p:last-child {
+            margin-bottom: 0;
+        }
+        .story-card a {
+            color: #3b6b6b;
+            text-decoration: underline;
+            text-decoration-thickness: 0.5px;
+            text-underline-offset: 3px;
+            transition: color 0.15s, background 0.1s;
+        }
+        .story-card a:hover {
+            color: #144d4d;
+            background: #f0f0e8;
+            border-radius: 2px;
+        }
+
+        /* 特点列表 — 卡片网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.6rem;
+            margin: 2.2rem 0 2rem;
+        }
+        .feature-item {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.6rem 1.5rem 1.8rem;
+            border: 1px solid #e4e4dc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.015);
+            transition: transform 0.1s, box-shadow 0.15s;
+        }
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+        }
+        .feature-item h3 {
+            font-size: 1.3rem;
+            font-weight: 450;
+            color: #1f3a3a;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.01em;
+        }
+        .feature-item p {
+            font-size: 0.97rem;
+            color: #3f3f3f;
+        }
+
+        /* FAQ / 温和结尾 */
+        .faq-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            border: 1px solid #e2e2db;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            margin-top: 1.8rem;
+        }
+        .faq-card h2 {
+            font-size: 1.3rem;
+            font-weight: 450;
+            color: #1f3a3a;
+            margin-bottom: 1rem;
+        }
+        .faq-card details {
+            margin-bottom: 1rem;
+            padding-left: 0.2rem;
+            border-bottom: 1px solid #eeeee6;
+            padding-bottom: 0.75rem;
+        }
+        .faq-card details:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .faq-card summary {
+            font-weight: 420;
+            cursor: pointer;
+            padding: 0.3rem 0;
+            color: #2b4a4a;
+        }
+        .faq-card summary::-webkit-details-marker { color: #507e7e; }
+        .faq-card details p {
+            margin-top: 0.6rem;
+            padding-left: 0.6rem;
+            color: #444;
+            font-size: 0.96rem;
+        }
+
+        .closing {
+            margin-top: 2.8rem;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #6b6b6b;
+            border-top: 1px solid #ddddd4;
+            padding-top: 1.6rem;
+        }
+        .closing a {
+            color: #3b6b6b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .closing a:hover {
+            color: #144d4d;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #dadad0;
+            margin: 1.2rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 hero -->
+    <div class="hero-card">
+        <p>资料整理，从零星规则到完整框架。</p>
+        <div class="sub">
+            从牌型到位置，从下注尺度到范围思维，<br>一份关于德州扑克的信息索引，逐步搭建。
+        </div>
+    </div>
+
+    <!-- 承接段落：叙事 + 自然链接 -->
+    <div class="story-card">
+        <p>几年前开始接触这项纸牌游戏，最初只是记住同花顺大于四条，后来发现手牌选择、底池赔率、翻前翻后策略才是更值得梳理的线索。陆续收集了各个阶段的理解笔记，也参考过不少讨论区的牌谱分析。这个过程中，一个汇集了基础概念和常见结构的页面逐渐成形——也就是现在看到的 <a href="https://site-dezhoupoker.com">德州扑克</a> 资料页。它更像一个起点，把分散的术语和思路放在一起，方便随时回溯。</p>
+        <p>整理时尽量保持客观：不夸大某一种玩法的收益，也不刻意简化复杂情形。每条内容都来自多篇文章的交叉比对，如果发现其中有遗漏或更合适的解释，也欢迎提出补充。</p>
+    </div>
+
+    <!-- 特点列表卡片 -->
+    <h2 style="font-weight:420; font-size:1.25rem; color:#1f3a3a; margin-bottom:0.5rem; letter-spacing:0.02em;">索引的几个侧重点</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>翻前范围</h3>
+            <p>不同位置建议起手牌表格，以及对加注、跟注、3-bet的简要说明。适合刚接触位置概念的玩家对照参考。</p>
+        </div>
+        <div class="feature-item">
+            <h3>赔率与胜率</h3>
+            <p>计算底池赔率、隐含赔率的基础方法和常见听牌概率。用实际牌例展示为什么有些跟注长期看是负期望。</p>
+        </div>
+        <div class="feature-item">
+            <h3>下注尺度</h3>
+            <p>翻牌圈、转牌圈、河牌圈的下注大小逻辑，以及不同尺度代表的意图。避免僵化下注，理解尺度背后的范围极化。</p>
+        </div>
+        <div class="feature-item">
+            <h3>常见错误</h3>
+            <p>从一手牌回顾翻前跟注太宽、翻后弃牌过多、忽略 blockers 等典型问题。每一条都附有简化场景举例。</p>
+        </div>
+    </div>
+
+    <!-- 场景 / 提示段落（仍为story-card风格） -->
+    <div class="story-card" style="margin-bottom:1.2rem;">
+        <p>如果你已经打过几百手牌，可能会对「范围」「频率」这些词有更具体的感受。资料页里也收录了不同牌面结构下的持续下注建议，以及针对紧弱型对手的调整思路。每条建议都附有简短的手牌例子，方便你在实战中验证或修正。</p>
+        <p>当然，纸牌游戏永远有随机性和对手变量。任何策略框架都无法覆盖所有桌况，保持观察和复盘比死记规则更重要。</p>
+    </div>
+
+    <!-- FAQ 摘要 与 温和结尾 -->
+    <div class="faq-card">
+        <h2>常见疑问 · 简短摘要</h2>
+
+        <details>
+            <summary>德州扑克入门需要记住哪些核心概念？</summary>
+            <p>手牌强度、位置、底池赔率、范围。这四项是绝大多数策略讨论的基石。资料页在「翻前范围」和「赔率与胜率」部分给出了具体说明。</p>
+        </details>
+
+        <details>
+            <summary>为什么同一手牌在不同书里的建议不一样？</summary>
+            <p>因为对手风格、筹码深度、牌桌动态都会改变最优策略。资料页尽量标注每种建议的适用场景，避免断章取义。</p>
+        </details>
+
+        <details>
+            <summary>索引会持续更新吗？</summary>
+            <p>会。随着新牌例和平衡策略的讨论，定期补充和修正。你也可以在 <a href="https://site-dezhoupoker.com">德州扑克</a> 页面留言反馈。</p>
+        </details>
+
+        <div style="margin-top: 1.8rem; font-size:0.95rem; color:#4a4a4a;">
+            <p style="margin-bottom:0.3rem;">最后想说的是：整理资料不是为了找到唯一正确的打法，而是让自己在面对不同局面时，有更清晰的思考路径。</p>
+            <p>如果有兴趣，可以从翻前表格开始，再慢慢扩展到翻后决策。每次只关注一个变量，进步会更扎实。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 + 备案说明 -->
+    <div class="closing">
+        <p>内容索引 · 基于公开牌例与策略讨论整理 &nbsp;|&nbsp; <a href="https://site-dezhoupoker.com">德州扑克</a> 资料页</p>
+        <p style="margin-top:0.4rem; font-size:0.9rem;">—— 不求全面，只求准确可查 ——</p>
+    </div>
+
+</div>
+</body>
+</html>
